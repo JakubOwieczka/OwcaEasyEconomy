@@ -1,0 +1,45 @@
+# ===============================
+# OwcaEasyEconomy - Jakub Owca
+# Discord: jakub.developer
+# Chętnie pomagam z konfiguracją
+# ===============================
+
+# Symbol waluty (tylko w WIADOMOŚCIACH) (domyślnie "zł")
+currency-symbol: "zł"
+
+# Saldo startowe nowego gracza (domyślnie 0.0)
+starting-balance: 0.0
+
+# Minimalna kwota przelewu (/pay) (domyślnie 0.5 - 0,5 )
+minimum-pay: 0.5
+
+# Kwota od której wymagane jest potwierdzenie przelewu (domyślnie 100000.0 (100k))
+confirm-pay-above: 100000.0
+
+# Format liczb:
+# STANDARD -> 1,000,000
+# KMB -> 1.25m
+number-format:
+  decimals: 2
+
+# SQLite - NIE DOTYKAJ JEŚLI NIE ZNASZ SIĘ NA BAZACH DANYCH!
+database:
+  type: SQLITE
+  file: economy.db
+
+# Wiadomości
+# {amount} - ilość pieniędzy, 
+# {currency} - waluta (domyślnie "zł"), 
+# {player} - gracz
+messages:
+  balance-self: "&aTwoje saldo: &f{amount} {currency}"
+  balance-other: "&aSaldo gracza &f{player}&a: &f{amount} {currency}"
+
+  pay-sent: "&fPrzelano &a{amount} {currency} &fdo gracza &a{player}"
+  pay-received: "&fOtrzymałeś &a{amount} {currency} &fod gracza &a{player}"
+
+  pay-confirm-required: "&cKwota jest duża. Aby potwierdzić wpisz &a/pay potwierdz"
+  pay-confirmed: "&aPrzelew został potwierdzony i wykonany."
+
+  not-enough-money: "&cNie masz wystarczających środków."
+  minimum-pay: "&cMinimalna kwota przelewu to {min} {currency}."

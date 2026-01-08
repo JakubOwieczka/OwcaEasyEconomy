@@ -1,0 +1,34 @@
+name: OwcaEasyEconomy
+version: 1.0.0
+main: pl.bloxycola.ekonomia.OwcaEasyEconomy
+api-version: 1.16
+author: "Owczaxxx (Discord: jakub.developer)"
+description: Prosty i wydajny plugin ekonomii z Vault i PlaceholderAPI
+depend: [Vault]
+softdepend: [PlaceholderAPI]
+
+commands:
+  money:
+    description: Zarządzanie ekonomią
+    usage: /money [gracz]
+    aliases: [bal, balance]
+  pay:
+    description: Przelej pieniądze innemu graczowi
+    usage: /pay <gracz> <kwota>
+
+permissions:
+  OwcaEasyEconomy.admin:
+    description: Pełne uprawnienia administracyjne
+    default: op
+
+  OwcaEasyEconomy.pay:
+    description: Możliwość wysyłania pieniędzy
+    default: true
+
+  OwcaEasyEconomy.balance.player:
+    description: Sprawdzanie własnego salda
+    default: true
+
+  OwcaEasyEconomy.balance.others:
+    description: Sprawdzanie salda innych graczy
+    default: op
